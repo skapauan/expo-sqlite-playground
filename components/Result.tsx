@@ -29,7 +29,7 @@ export const Result = (props: ResultProps) => {
             for (let i = 0; !!(row = pdr.item(i)); i++) {
                 const tableRow: any[] = []
                 tableHead.forEach((key) => {
-                    tableRow.push(row[key])
+                    tableRow.push(`${row[key]} (${typeof row[key]})`)
                 })
                 tableData.push(tableRow)
             }
